@@ -13,7 +13,7 @@ const processProducer = async () => {
   await producer.connect();
   await producer.send({
     topic: topicName,
-    messages: [{ value: age }],
+    messages: [{ value: age, partition: age <= 10 ? 0 : 1 }],
   });
 };
 

@@ -8,7 +8,7 @@ const kafka = new Kafka({
 const topicName = "saveAge";
 
 const processConsumer = async () => {
-  const consumer = kafka.consumer({ groupId: "orders" });
+  const consumer = kafka.consumer({ groupId: "users" });
 
   await consumer.connect();
 
